@@ -1,0 +1,9 @@
+#pragma once
+#include <Eigen/Core>
+#include <vector>
+#include <variant>
+#include <fstream>
+#include <chrono>
+#include <random>
+#include <iostream>
+#include <experimental/filesystem>
