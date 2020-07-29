@@ -55,7 +55,7 @@ Eigen::MatrixXf dRELU(const Eigen::MatrixXf& x) {
   Eigen::MatrixXf res{x.rows(), x.cols()};
   for(int i = 0; i < x.rows(); ++i) {
     for(int j = 0; j < x.cols(); ++j) {
-      res(i, j) = (x(i, j) < 0.0f) ? 0.0f : 1.0f;
+      res(i, j) = (x(i, j) > 0.0f) ? 1.0f : 0.0f;
     }
   }
   return res;
