@@ -105,7 +105,7 @@ void DNNClassfier::_optimize(const Eigen::MatrixXf& inputs, const Eigen::VectorX
     std::visit([&](auto&& layer){ layer.backward_pass(x, dz); }, _layers[k]);
   }
 
-  _update(lrate / inputs.rows());
+  _update(lrate / std::sqrt(inputs.rows()));
 }
 
 void DNNClassfier::_update(float lrate) {
